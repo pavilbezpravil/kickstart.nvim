@@ -38,13 +38,22 @@ return {
         max_completion_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
         --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
       },
-    },
-    behaviour = {
-      auto_suggestions = true, -- Experimental stage
-      auto_set_keymaps = true,
-      enable_token_counting = false, -- Whether to enable token counting. Default to true.
-      enable_cursor_planning_mode = true, -- Whether to enable Cursor Planning Mode. Default to false.
-      enable_claude_text_editor_tool_mode = false, -- Whether to enable Claude Text Editor Tool Mode.
+      behaviour = {
+        auto_suggestions = false, -- Experimental stage
+        auto_set_keymaps = true,
+        enable_token_counting = false, -- Whether to enable token counting. Default to true.
+        enable_cursor_planning_mode = true, -- Whether to enable Cursor Planning Mode. Default to false.
+        enable_claude_text_editor_tool_mode = false, -- Whether to enable Claude Text Editor Tool Mode.
+      },
+      windows = {
+        width = 30, -- default % based on available width
+        edit = {
+          start_insert = false, -- Start insert mode when opening the edit window
+        },
+        ask = {
+          start_insert = false, -- Start insert mode when opening the ask window
+        },
+      },
     },
     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
     build = 'make',
